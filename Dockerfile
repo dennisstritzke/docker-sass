@@ -7,5 +7,8 @@ RUN apt-get update && \
   gem install sass --no-user-install -v 3.5.5 && \
   apt-get clean
 
+ENV LC_ALL=C.UTF-8 \
+    LANG=C.UTF-8
+
 ENTRYPOINT ["/usr/local/bin/sass"]
 CMD ["-version"]
